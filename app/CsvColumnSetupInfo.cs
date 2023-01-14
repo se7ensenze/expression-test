@@ -23,16 +23,15 @@ class CsvColumnSetupInfo
     public static CsvColumnSetupInfo Create<TInstance, TProperty>(
         Expression<Func<TInstance, TProperty>> expression,
         string? customColumnName = null,
-        Expression<Func<TProperty, string>>? formatExpression = null
+        Func<TProperty, string>? formatExpression = null
     )
     {
         if (expression.Body is not MemberExpression memberExpression)
             throw new Exception("Invalid Expression");
 
         var selectedPropertyName = memberExpression.Member.Name;
-
-        Func<TProperty, string> formatFunc = formatExpression != null ?
-            formatExpression.Compile() : ((v) => v?.ToString() ?? string.Empty);
+GCNotificationStatus 
+        Func<TProperty, string> formatFunc = formatExpression ?? ((v) => v?.ToString() ?? string.Empty);
 
         var properties = PropertyInfoCache.GetCached(typeof(TInstance));
         var propInfo = properties.First(p => p.Name == selectedPropertyName);

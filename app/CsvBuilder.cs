@@ -14,7 +14,7 @@ public class CsvBuilder<T>
     }
 
     public CsvBuilder<T> Setup<TProperty>(Expression<Func<T, TProperty>> expression, string? customColumnName = null,
-        Expression<Func<TProperty, string>>? formatExpression = null)
+        Func<TProperty, string>? formatExpression = null)
     {
         var newSetup = CsvColumnSetupInfo.Create<T, TProperty>(expression, customColumnName, formatExpression);
 
