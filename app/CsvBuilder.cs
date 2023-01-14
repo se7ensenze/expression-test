@@ -8,7 +8,7 @@ public class CsvBuilder<T>
 {
     class SetupInfo
     {
-        public string HeaderText { get; set; }
+        public string HeaderText { get; set; } = string.Empty;
         public IValueFormatter Formatter { get; set; }
     }
 
@@ -46,7 +46,7 @@ public class CsvBuilder<T>
     public byte[] ToBytes()
     {
         var sb = new StringBuilder();
-        sb.AppendJoin(",", _setupDic.Values.Select(t => t.HeaderText));
+        sb.AppendJoin(",", _setupDic.Values.Select(t => $"\"{t.HeaderText}\""));
         foreach (var d in _data)
         {
             sb.AppendLine();

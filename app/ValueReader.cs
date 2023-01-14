@@ -20,6 +20,13 @@ public class ValueReader<TProperty> : IValueFormatter
 
         if (value is null) return string.Empty;
 
-        return _formatFunc.Invoke((TProperty)value);
+        var text = _formatFunc.Invoke((TProperty)value);
+
+        if (text.Contains('"'))
+        {
+            text = text.Replace("\"", "\"\"");
+        }
+
+        return $"\"{text}\"";
     }
 }
