@@ -14,12 +14,10 @@ public class CsvBuilder<T>
 
     private readonly Dictionary<string, SetupInfo> _setupDic = new();
     private readonly IEnumerable<T> _data;
-    private readonly IEnumerable<PropertyInfo> _properties;
 
     public CsvBuilder(IEnumerable<T> data)
     {
         _data = data;
-        _properties = PropertyInfoCache.GetCached(typeof(T));
     }
 
     public CsvBuilder<T> Setup<TProperty>(Expression<Func<T, TProperty>> expression, string? customColumnName = null,
@@ -33,7 +31,8 @@ public class CsvBuilder<T>
         Func<TProperty, string> formatFunc = formatExpression != null ?
             formatExpression.Compile() : ((v) => v?.ToString() ?? string.Empty);
 
-        var propInfo = _properties.First(p => p.Name == selectedPropertyName);
+        var properties = PropertyInfoCache.GetCached(typeof(T));
+        var propInfo = properties.First(p => p.Name == selectedPropertyName);
 
         _setupDic.Add(selectedPropertyName, new SetupInfo
         {
