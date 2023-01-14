@@ -1,6 +1,6 @@
 namespace App;
 
-public interface IValueFormatter
+public interface IValueReader
 {
     string Read(object? value);
 }

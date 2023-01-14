@@ -2,7 +2,7 @@ using System.Reflection;
 
 namespace App;
 
-public class ValueReader<TProperty> : IValueFormatter
+public class ValueReader<TProperty> : IValueReader
 {
     private readonly PropertyInfo _propInfo;
     private readonly Func<TProperty, string> _formatFunc;
@@ -12,6 +12,7 @@ public class ValueReader<TProperty> : IValueFormatter
         _propInfo = propInfo;
         _formatFunc = formatFunc;
     }
+    
     public string Read(object? instance)
     {
         if (instance is null) return string.Empty;
