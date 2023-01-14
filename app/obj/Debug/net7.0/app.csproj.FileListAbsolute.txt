@@ -1,0 +1,15 @@
+/Users/lawansiri/Projects/ExpressionTest/app/bin/Debug/net7.0/app
+/Users/lawansiri/Projects/ExpressionTest/app/bin/Debug/net7.0/app.deps.json
+/Users/lawansiri/Projects/ExpressionTest/app/bin/Debug/net7.0/app.runtimeconfig.json
+/Users/lawansiri/Projects/ExpressionTest/app/bin/Debug/net7.0/app.dll
+/Users/lawansiri/Projects/ExpressionTest/app/bin/Debug/net7.0/app.pdb
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/app.csproj.AssemblyReference.cache
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/app.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/app.AssemblyInfoInputs.cache
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/app.AssemblyInfo.cs
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/app.csproj.CoreCompileInputs.cache
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/app.dll
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/refint/app.dll
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/app.pdb
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/app.genruntimeconfig.cache
+/Users/lawansiri/Projects/ExpressionTest/app/obj/Debug/net7.0/ref/app.dll
