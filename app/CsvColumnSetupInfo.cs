@@ -30,7 +30,7 @@ class CsvColumnSetupInfo
             throw new Exception("Invalid Expression");
 
         var selectedPropertyName = memberExpression.Member.Name;
-GCNotificationStatus 
+
         Func<TProperty, string> formatFunc = formatExpression ?? ((v) => v?.ToString() ?? string.Empty);
 
         var properties = PropertyInfoCache.GetCached(typeof(TInstance));
