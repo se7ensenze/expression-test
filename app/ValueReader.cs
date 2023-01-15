@@ -12,7 +12,7 @@ public class ValueReader<TProperty> : IValueReader
         _propInfo = propInfo;
         _formatFunc = formatFunc;
     }
-    
+
     public string Read(object? instance)
     {
         if (instance is null) return string.Empty;

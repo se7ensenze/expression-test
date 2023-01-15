@@ -6,14 +6,12 @@ var data = new Foo[] {
         new Foo{ Name = "Jiew", Value = 2}
     };
 
-    //https://gist.github.com/MaciejLisCK/8804658
-
-var contentBytes = data.CreateCsvBuilder()
+var contentBytes = new CsvBuilder<Foo>(data)
     .Setup(e => e.Name, "Symbol Name, Property Name")
     .Setup(e => e.Value, "FEE (Incl VAT)", value => value.ToString("D2"))
     .ToBytes();
 
-    var csv = Encoding.UTF8.GetString(contentBytes);
+var csv = Encoding.UTF8.GetString(contentBytes);
 
 Console.WriteLine(csv);
 Console.WriteLine("----------");

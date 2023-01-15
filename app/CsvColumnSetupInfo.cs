@@ -6,7 +6,7 @@ class CsvColumnSetupInfo
 {
     public string PropertyName { get; } = string.Empty;
     public string HeaderText { get; } = string.Empty;
-    private readonly IValueReader _formatter ;
+    private readonly IValueReader _formatter;
 
     public CsvColumnSetupInfo(string propertyName, string headerText, IValueReader formatter)
     {
